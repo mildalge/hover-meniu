@@ -1,0 +1,62 @@
+body {
+    background: #223032;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 300px;
+
+}
+
+h1 {
+    color: white;
+    font-family: ariel;
+    text-transform: uppercase;
+    text-align:center;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    /* transition: 0.3s;
+    transition-delay: 0.1s; */
+}
+
+h1:hover::before {
+    top: 0%;
+    left: 40%;
+    height: 100%;
+    transform: scaleZ(40%);
+    /* transform-origin: bottom left; */
+    opacity: 1;
+}
+
+h1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: crimson;
+    inset:20px 40px 30px 0px;
+    top: 0; right: 0; bottom:0; left:0;
+    transform: scaleZ(-20%);
+    /* transform-origin: bottom right;
+    transition: transform .6s ease; */
+    /* transition: 0.5s; */
+    /* z-index: -1; */
+    opacity: 0;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 42%;
+    height: 3px;
+    width: 2px;
+    background: crimson;
+    transition: 0.3s;
+    transition-delay: 0.15s;
+}
+
+h1:hover::after {
+    width: 14%;
+    
+}
